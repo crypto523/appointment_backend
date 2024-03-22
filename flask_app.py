@@ -1,7 +1,7 @@
 from flask import Flask, request, jsonify
 from flask_cors import CORS
 import database
-import main
+import bot
 
 app = Flask(__name__)
 cors = CORS(app, resources={r"/*": {"origins": "*"}})
@@ -35,7 +35,7 @@ def start_bot():
     password = database.getPassword(connection, email)
     print(password)
     database.closeConnection(connection)
-    response = main.run(email, password, country)
+    response = bot.run(email, password, country)
     print(response)
     return "success"
 
