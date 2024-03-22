@@ -3,15 +3,15 @@
 
  Source Server         : mysql
  Source Server Type    : MySQL
- Source Server Version : 100428 (10.4.28-MariaDB)
+ Source Server Version : 100432 (10.4.32-MariaDB)
  Source Host           : localhost:3306
  Source Schema         : appoinment
 
  Target Server Type    : MySQL
- Target Server Version : 100428 (10.4.28-MariaDB)
+ Target Server Version : 100432 (10.4.32-MariaDB)
  File Encoding         : 65001
 
- Date: 20/03/2024 04:28:44
+ Date: 21/03/2024 20:35:35
 */
 
 SET NAMES utf8mb4;
@@ -29,7 +29,7 @@ CREATE TABLE `appoinments`  (
   `telephone` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
   `representation` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 57 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 57 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of appoinments
@@ -90,5 +90,21 @@ INSERT INTO `appoinments` VALUES (53, 'Sanjaya Dilantha Kumara Samarajeewa', 'Si
 INSERT INTO `appoinments` VALUES (54, 'Darshana Bandara Premarathna', 'Wanni Adipaththu Mudiyanselage', NULL, NULL, 'Assistant');
 INSERT INTO `appoinments` VALUES (55, 'Harshila Kavindi', 'Kodithuwakku Arachchige', NULL, NULL, 'Assistant');
 INSERT INTO `appoinments` VALUES (56, 'Sachintha Dilshan', 'Rajapaksha Arachchige', NULL, NULL, 'Assistant');
+
+-- ----------------------------
+-- Table structure for credentials
+-- ----------------------------
+DROP TABLE IF EXISTS `credentials`;
+CREATE TABLE `credentials`  (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `email` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  `password` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  PRIMARY KEY (`id`) USING BTREE
+) ENGINE = InnoDB AUTO_INCREMENT = 2 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
+
+-- ----------------------------
+-- Records of credentials
+-- ----------------------------
+INSERT INTO `credentials` VALUES (1, 'maneshimalikam@gmail.com', 'EuroGlobe$2024');
 
 SET FOREIGN_KEY_CHECKS = 1;
