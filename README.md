@@ -1,5 +1,5 @@
 <center>
 
-[![Watch the video](./captchaImage.png)]
+![Watch the video](./captchaImage.png)
 
 </center>
